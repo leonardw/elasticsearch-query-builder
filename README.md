@@ -1,22 +1,36 @@
-
 # elasticsearch-query-builder
 
 Utility to assist in building Elasticsearch query JSON. Supports wildcard in inputs.
 
-## Usage
+Features:
+*
+*
+
+## Installation
+
 ```sh
-$ git clone https://github.com/leonardw/elasticsearch-query-builder
+$ npm install elasticsearch-query-builder
+``` 
+
+## Usage
+
+The following is taken from full demo code at [example](https://github.com/leonardw/example)
+
+```js
+...
 ```
 
-## Developing
+## API
 
+#### .test
+...
 
 
 ##License
 
 (The MIT License)
 
-Copyright (c) 2013 Leonard Wu <leonard.wu92@alumni.ic.ac.uk>
+Copyright (c) 2014 Leonard Wu <leonard.wu92@alumni.ic.ac.uk>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

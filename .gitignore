@@ -1,0 +1,4 @@
+.DS_Store
+.jshintrc
+.*.md.html
+node_modules/

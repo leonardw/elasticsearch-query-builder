@@ -1,0 +1,35 @@
+{
+  "name": "elasticsearch-query-builder",
+  "version": "0.0.1",
+  "description": "Utility to assist in building Elasticsearch query JSON. Supports wildcard in inputs.",
+  "author": "Leonard Wu <leonard.wu92@alumni.ic.ac.uk>",
+  "contributors": [{
+    "name": "Leonard Wu",
+    "email": "leonard.wu92@alumni.ic.ac.uk"
+  }],
+  "main": "lib/esqbuilder.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonardw/elasticsearch-query-builder.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "elastic",
+    "search",
+    "query"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardw/elasticsearch-query-builder/issues"
+  },
+  "homepage": "https://github.com/leonardw/elasticsearch-query-builder",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  }
+}
