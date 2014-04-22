@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-query-builder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utility to assist in building Elasticsearch query JSON. Supports wildcard in inputs.",
   "author": "Leonard Wu <leonard.wu92@alumni.ic.ac.uk>",
   "contributors": [{

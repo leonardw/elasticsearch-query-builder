@@ -1,6 +1,6 @@
 # elasticsearch-query-builder
 
-Utility to assist in building Elasticsearch query JSON. Supports wildcard in inputs.
+Utility to assist in building Elasticsearch query JSON.
 
 Features:
 * Wildcards (?, *) in string input
@@ -18,7 +18,7 @@ The following example will match any Smith whose first name starts with John (e.
 who has chosen either green or blue. 
 
 ```js
-var esqbuilder = require('./elasticsearch-query-builder');
+var esqbuilder = require('elasticsearch-query-builder');
 
 var q = {};
 
@@ -32,6 +32,36 @@ esqbuilder.stringCriteria(c.firstname, q, 'firstname');
 esqbuilder.stringCriteria(c.lastname, q, 'lastname');
 esqbuilder.selectCriteria(c.choices, q, 'choices');
 console.log('Elasticsearch query:', JSON.stringify(q, null, '  '));
+```
+
+The output is:
+```js
+Elasticsearch query: {
+  "filter": {
+    "and": [
+      {
+        "query": {
+          "wildcard": {
+            "firstname": "john*"
+          }
+        }
+      },
+      {
+        "term": {
+          "lastname": "smith"
+        }
+      },
+      {
+        "terms": {
+          "choices": [
+            "blue",
+            "green"
+          ]
+        }
+      }
+    ]
+  }
+}
 ```
 
 ## API
