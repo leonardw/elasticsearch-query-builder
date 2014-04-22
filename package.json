@@ -8,8 +8,7 @@
     "email": "leonard.wu92@alumni.ic.ac.uk"
   }],
   "main": "lib/esqbuilder.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
