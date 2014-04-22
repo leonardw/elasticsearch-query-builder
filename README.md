@@ -3,8 +3,8 @@
 Utility to assist in building Elasticsearch query JSON. Supports wildcard in inputs.
 
 Features:
-*
-*
+* Wildcards (?, *) in string input
+* Collates boolean choices into an array of keys, e.g. `{red: true, green: false}`
 
 ## Installation
 
@@ -14,16 +14,32 @@ $ npm install elasticsearch-query-builder
 
 ## Usage
 
-The following is taken from full demo code at [example](https://github.com/leonardw/example)
+The following example will match any Smith whose first name starts with John (e.g, John, Johnny)
+who has chosen either green or blue. 
 
 ```js
-...
+var esqbuilder = require('./elasticsearch-query-builder');
+
+var q = {};
+
+var c = {
+	firstname: 'John*',
+	lastname: 'Smith',
+	choices: {red:false, green:true, blue:true}
+};
+
+esqbuilder.stringCriteria(c.firstname, q, 'firstname');
+esqbuilder.stringCriteria(c.lastname, q, 'lastname');
+esqbuilder.selectCriteria(c.choices, q, 'choices');
+console.log('Elasticsearch query:', JSON.stringify(q, null, '  '));
 ```
 
 ## API
 
-#### .test
-...
+#### .stringCriteria(stringValue, queryObject, queryProperty)
+
+
+#### .selectCriteria(selectObjectValue, queryObject, queryProperty)
 
 
 ##License
